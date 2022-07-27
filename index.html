@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PizzaHut</title>
+    <!-- own style file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-------------------------Home banner-->
+    <section id="home" class="banner">
+      <div class="nav_icon">
+        <img class="logo" src="./assets//images/pizza.png" alt="" />
+      </div>
+      <div class="banner_text">
+        <h1>Pizza Hut</h1>
+        <p>Pizza Hut brand experience resonates generosity</p>
+        <div class="banner_btn">
+          <a href="#"><span></span>Order Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------------navbar start here -->
+    <div id="side_nav">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#pizza"> Pizza's</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#meetus">Meet Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="manu_btn">
+      <img id="menu" src="./assets/images/hamburger.png" alt="" />
+    </div>
+    <!-----------------pizza start here -->
+    <section class="pizza" id="pizza">
+      <div class="tittle_text">
+        <h1>Our PizzaHut colllection</h1>
+        <div class="pizza_box">
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-05.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-01.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-02.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-03.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-04.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+          <div class="signle_service">
+            <img
+              src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/prod-06.jpg"
+              alt=""
+            />
+            <div class="pizza_info">
+              <h1>Sweet Cheeses</h1>
+              <p>$60</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------news -->
+    <section class="news" id="news">
+      <div class="news_tittle">
+        <h4 class="news_heading">OUR NEWS</h4>
+        
+      
+      </div>
+      <div class="news_box">
+        <div class="news_details">
+          <h1>New Appetizers</h1>
+          <p>10 JANUARY</p>
+          <h5>
+            Pizza Hut brand experience resonates generosity, friendships, naturalness and fun; Pizza Hut brand experience resonates generosity, friendships, naturalness and fun; Pizza Hut brand experience resonates generosity, friendships, naturalness and fun; 
+          </h5>
+        </div>
+        <div class="news_img">
+          <img
+            src="http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/01/post-1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer start here -->
+    <footer>
+      
+    </footer>
+    <!---------------javascript -->
+    <script>
+      var manu_btn = document.getElementById("manu_btn");
+      var side_nav = document.getElementById("side_nav");
+      var menu = document.getElementById("menu");
+
+      side_nav.style.right = "-250px";
+      manu_btn.onclick = function () {
+        if (side_nav.style.right == "-250px") {
+          side_nav.style.right = "0";
+          menu.src = "./assets/images/cross-mark.png";
+        } else {
+          side_nav.style.right = "-250px";
+          menu.src = "./assets/images/hamburger.png";
+        }
+      };
+    </script>
+  </body>
+</html>

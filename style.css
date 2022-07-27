@@ -1,0 +1,301 @@
+/* font family link */
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Oswald:wght@500&family=Playfair+Display:ital,wght@1,600&display=swap");
+/* basics  style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --text-color: #6a6e49;
+  --secondary-color: #e6e8d6;
+  --background: #cfd2b3;
+  --button-hover-color: #6f6d6d;
+  --text-black: #000000;
+  --text-white: rgb(9, 60, 36);
+}
+/************************ home */
+.banner {
+  background: url("http://www.nicdarkthemes.com/themes/restaurant/wp/demo/pizza/wp-content/uploads/sites/3/2019/02/para-10.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  height: 100%;
+}
+.logo {
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+}
+.banner_text {
+  text-align: center;
+  color: var(--text-white);
+  padding-top: 180px;
+}
+.banner_text h1 {
+  font-size: 130px;
+}
+.banner_text p {
+  font-size: 20px;
+}
+.banner_btn {
+  margin: 70px auto;
+  padding-bottom: 70px;
+}
+.banner_btn a {
+  font-size: 20px;
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: white;
+  border: 0.5px solid white;
+  position: relative;
+  z-index: -1;
+}
+.banner_btn a span {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--text-color);
+  z-index: -1;
+  transition: 0.8s;
+}
+.banner_btn:hover a span {
+  width: 100%;
+}
+.banner_btn a:hover {
+}
+
+/* nav style start here */
+#side_nav {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background: var(--background);
+  z-index: 2;
+  transition: 0.5s;
+}
+nav ul li {
+  margin: 50px 20px;
+}
+nav ul li a {
+  color: var(--text-color);
+}
+#manu_btn {
+  width: 50px;
+  height: 50px;
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+#manu_btn img {
+  width: 20px;
+  margin-top: 15px;
+}
+/******************** pizza style start here */
+.pizza {
+  padding: 70px 0;
+}
+.tittle_text h1 {
+  font-size: 60px;
+  color: var(--text-color);
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.pizza_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+}
+.signle_service {
+  width: 300px;
+  height: 360px;
+  margin: 0 50px;
+  background: #6a6e49;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+}
+.signle_service h1 {
+  font-size: 30px;
+  color: white;
+
+  margin-left: 50%;
+}
+.signle_service p {
+  font-size: 35px;
+  color: white;
+
+  margin-left: 50%;
+  margin-bottom: 40%;
+}
+.signle_service img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.signle_service .pizza_info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+.signle_service:hover .pizza_info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.signle_service:hover {
+  transform: translateY(20px);
+}
+.signle_service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #e5e6dc, #cfd2b3);
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+.signle_service:hover:before {
+  opacity: 1;
+}
+
+/******************news */
+.news {
+  width: 100%;
+  padding: 70px 0;
+}
+.news_tittle {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.news_tittle .news_heading {
+  margin: auto;
+
+  font-size: 30px;
+  color: #6a6e49;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+.news_tittle .news_heading::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(#d9dbce, rgb(208, 97, 97));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(1deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.news_box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.news_details {
+  flex-basis: 50%;
+  text-align: start;
+}
+.news_img {
+  flex-basis: 50%;
+}
+.news_details {
+  font-size: 35px;
+  color: var(--text-color);
+}
+.news_details h5 {
+  font-size: 25px;
+}
+.news_img img {
+  width: auto;
+  height: 450px;
+  border-radius: 7px;
+}
+.news_details p {
+  font-size: 30px;
+  color: red;
+  padding: 20px 0;
+}
+
+/* media query for big devices */
+@media only screen and (max-width: 1500px) {
+  .pizza_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8.5rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+/* mdium devices */
+@media only screen and (max-width: 950px) {
+  .pizza_box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .banner_text h1 {
+    font-size: 60px;
+  }
+  .pizza_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news_box {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .news_details h5 {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+  .news_img img {
+    width: auto;
+    height: 200px;
+    border-radius: 7px;
+  }
+}
